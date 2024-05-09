@@ -1,6 +1,6 @@
 <template>
   <div class="base-card" :class="customCardClass">
-    <img class="base-card__image" :src="`public/${props.image}.jpg`" />
+    <img class="base-card__image" :src="`./${props.image}.jpg`" />
     <h4 class="base-card__title">{{ cardTitle }}</h4>
     <div class="base-card__details-list">
       <slot></slot>
