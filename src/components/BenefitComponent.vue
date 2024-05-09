@@ -1,7 +1,7 @@
 <template>
   <div class="benefit">
     <div class="benefit__icon-wrapper">
-      <img class="benefit__icon" :src="`/src/assets/icons/${icon}.svg`" alt="Privalumo ikonėlė" />
+      <img class="benefit__icon" :src="`/public/${icon}.svg`" alt="Privalumo ikonėlė" />
     </div>
     <div class="benefit__text-wrapper">
       <!-- TITLE -->

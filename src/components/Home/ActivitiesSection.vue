@@ -34,7 +34,6 @@ import type { Option, Select } from '@/types'
 import TheFilter from '../TheFilter.vue'
 import BaseCard from '@/components/Base/BaseCard.vue'
 import { testData } from '@/data'
-import { computed } from 'vue'
 
 const selectionData: Select[] = [
   { name: 'city', label: 'Miestas', options: [{ display: 'Visi miestai', value: 'all_city' }] },
