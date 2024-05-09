@@ -1,0 +1,17 @@
+.layout__container {
+}
+
+.section__container {
+  max-width: var(--max-width);
+  padding: 0 var(--pd-page-side);
+  margin: 0 auto;
+}
+
+header .link-active {
+  color: var(--cl-primary);
+}
+
+.section {
+  position: relative;
+  padding: var(--pd-section-vertical) 0;
+}
