@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import AuthView from '../views/AuthView.vue'
+import ActivityView from "../views/ActivityView.vue"
 import SignIn from '../components/Auth/SignIn.vue'
 import SignUp from '@/components/Auth/SignUp.vue'
 import PassRecover from '@/components/Auth/PassRecover.vue'
@@ -31,6 +32,11 @@ const router = createRouter({
         { path: 'signup', component: SignUp, name: 'SignUp' },
         { path: 'recover', component: PassRecover, name: 'Recover' }
       ]
+    },
+    {
+      path: '/activity/:id',
+      name: 'activity',
+      component: ActivityView
     }
   ]
 })

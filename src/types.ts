@@ -14,9 +14,13 @@ export type TestData = {
 }
 
 export type Activity = {
+  id: number,
   title: string
-  image: string
-  params: { heading: string; value: string }[]
+  image: string,
+  address: string,
+  description: string,
+  params: { heading: string; value: string }[],
+  company: Company
 }
 
 export enum ButtonTypes {
@@ -26,11 +30,21 @@ export enum ButtonTypes {
 
 export enum ButtonStyles {
   REGULAR = 'regular',
-  OUTLINE = 'outline'
+  OUTLINE = 'outline',
 }
 
 export enum ButtonSizes {
   SMALL = 'small',
   MEDIUM = 'medium',
   LARGE = 'large'
+}
+
+type Company = {
+  name: string,
+  city: string
+  person: {
+    name: string,
+    email: string
+    phone: string
+  }
 }

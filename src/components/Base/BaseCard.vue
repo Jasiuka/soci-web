@@ -1,15 +1,16 @@
 <template>
-  <div class="base-card" :class="customCardClass">
+  <RouterLink :to="routeTo" class="base-card" :class="customCardClass">
     <img class="base-card__image" :src="`./${props.image}.jpg`" />
     <h4 class="base-card__title">{{ cardTitle }}</h4>
     <div class="base-card__details-list">
       <slot></slot>
     </div>
-  </div>
+  </RouterLink>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
+
 
 const props = defineProps({
   image: {
@@ -23,12 +24,13 @@ const props = defineProps({
   customCardClass: {
     type: String,
     required: false
+  },
+  routeTo: {
+    type: String,
+    required: true,
   }
 })
 
-const getImageUrl = computed(() => {
-  return new URL(`/src/assets/logo/${props.image}.jpg`, import.meta.url).href
-})
 </script>
 
 <style scoped>

@@ -76,6 +76,7 @@ defineProps({
   color: var(--cl-light);
 }
 
+
 /* SIZES */
 
 .custom-button.small {

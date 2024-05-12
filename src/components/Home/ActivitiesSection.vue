@@ -12,6 +12,7 @@
           :image="activity.image"
           :card-title="activity.title"
           custom-card-class="activities-list__card"
+          :route-to="`/activity/${activity.id}`"
         >
           <div class="acvtivities-list__card-params">
             <div class="activities-list__param" v-for="param in activity.params">
@@ -34,6 +35,7 @@ import type { Option, Select } from '@/types'
 import TheFilter from '../TheFilter.vue'
 import BaseCard from '@/components/Base/BaseCard.vue'
 import { testData } from '@/data'
+console.log(testData)
 
 const selectionData: Select[] = [
   { name: 'city', label: 'Miestas', options: [{ display: 'Visi miestai', value: 'all_city' }] },
