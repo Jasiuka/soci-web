@@ -74,14 +74,18 @@
   import { useRoute } from 'vue-router';
   import { ButtonSizes, ButtonStyles } from '@/types';
   const {params} = useRoute()
-  const activity = computed(() => findDataById())
 
   import { computed, onBeforeMount, ref } from 'vue';
 import type { Activity } from '@/types';
 import CustomButton from '@/components/Custom/CustomButton.vue';
+const activity = ref<Activity | null>(null)
 
 const activeTab = ref<string>('info')
 
+onBeforeMount(() => {
+  const activityFound = findDataById() as Activity | null
+  activity.value = activityFound
+})
 
   function findDataById() {
     const id = parseInt(params.id as string)
