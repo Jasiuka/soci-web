@@ -83,6 +83,7 @@ const activity = ref<Activity | null>(null)
 const activeTab = ref<string>('info')
 
 onBeforeMount(() => {
+  console.log('SHOULD WORK')
   const activityFound = findDataById() as Activity | null
   activity.value = activityFound
 })
