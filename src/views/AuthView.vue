@@ -104,6 +104,7 @@ const formName = computed(() => {
   height: 12rem;
 }
 
+/* 900 px */
 @media only screen and (max-width: 56.25rem) {
   .auth__illustration {
     display: none;
@@ -123,14 +124,15 @@ const formName = computed(() => {
   }
 }
 
+/* 500px */
 @media only screen and (max-width: 31.25rem) {
   .auth__form-name {
-    font-size: var(--fs-medium);
+    font-size: calc(var(--fs-medium) - 0.3rem);
   }
 
   .auth__logo {
-    width: 10rem;
-    height: 8rem;
+    width: 8rem;
+    height: 6rem;
   }
 
   .auth__right-side h4 {

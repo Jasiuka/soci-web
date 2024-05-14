@@ -32,7 +32,7 @@
 
             <div v-for="activityParam in activity?.params" :key="activityParam.heading" class="activity-page__param">
               <h4 class="activity-page__param-title title">{{ activityParam.heading }}</h4>
-              <p class="activity-page__param-value">{{ activityParam.value }}</p>
+              <p  :class="{ [getFreeSpacesColor(activityParam.value)]: activityParam.heading.includes('vietos') }" class="activity-page__param-value param-value">{{ activityParam.value }}</p>
             </div>
           </div>
         </div>
@@ -69,6 +69,7 @@
   </template>
 
   <script lang="ts" setup>
+  import { getFreeSpacesColor } from '@/utils/helper';
   import { testData } from '@/data';
   import { useRoute } from 'vue-router';
   import { ButtonSizes, ButtonStyles } from '@/types';
@@ -202,5 +203,12 @@ const activeTab = ref<string>('info')
   font-weight: 500;
 }
 
+
+/* 500px */
+@media only screen and (max-width:31.25rem) {
+  .activity-page__params-wrapper {
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+}
   </style>
   

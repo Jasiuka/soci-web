@@ -18,7 +18,7 @@
             <div class="activities-list__param" v-for="param in activity.params">
               <span>{{ param.heading }}:</span>
               <span
-                class="activities-list__param-value"
+                class="activities-list__param-value param-value"
                 :class="{ [getFreeSpacesColor(param.value)]: param.heading.includes('vietos') }"
                 >{{ param.value }}</span
               >
@@ -35,7 +35,7 @@ import type { Option, Select } from '@/types'
 import TheFilter from '../TheFilter.vue'
 import BaseCard from '@/components/Base/BaseCard.vue'
 import { testData } from '@/data'
-console.log(testData)
+import { getFreeSpacesColor } from '@/utils/helper';
 
 const selectionData: Select[] = [
   { name: 'city', label: 'Miestas', options: [{ display: 'Visi miestai', value: 'all_city' }] },
@@ -63,25 +63,26 @@ const options: Option[] = [
   { display: 'Visos sritys', value: 'all_field' }
 ]
 
-function getFreeSpacesColor(valueString: string) {
-  const valueArray = valueString.split('/')
-  const availableSpaces = valueArray[0]
-  const spaces = valueArray[1]
 
-  const percent = parseInt(availableSpaces) / parseInt(spaces)
+// function getFreeSpacesColor(valueString: string) {
+//   const valueArray = valueString.split('/')
+//   const availableSpaces = valueArray[0]
+//   const spaces = valueArray[1]
 
-  let classToAdd = ''
+//   const percent = parseInt(availableSpaces) / parseInt(spaces)
 
-  if (percent < 0.3) {
-    classToAdd = 'low'
-  } else if (percent < 0.6 && percent > 0.3) {
-    classToAdd = 'medium'
-  } else if (percent > 0.6) {
-    classToAdd = 'alot'
-  }
+//   let classToAdd = ''
 
-  return classToAdd
-}
+//   if (percent < 0.3) {
+//     classToAdd = 'low'
+//   } else if (percent < 0.6 && percent > 0.3) {
+//     classToAdd = 'medium'
+//   } else if (percent > 0.6) {
+//     classToAdd = 'alot'
+//   }
+
+//   return classToAdd
+// }
 </script>
 
 <style scoped>
@@ -109,6 +110,10 @@ function getFreeSpacesColor(valueString: string) {
   gap: calc(var(--sp-small) - 0.6rem);
 }
 
+.activities-list__param > span:first-child {
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+}
+
 :deep(.activities-list__card) {
   cursor: pointer;
   border: 2px solid transparent;
@@ -118,15 +123,18 @@ function getFreeSpacesColor(valueString: string) {
   border: 2px solid var(--cl-primary);
 }
 
-.activities-list__param-value.low {
-  color: red;
+/* 500px */
+@media only screen and (max-width:31.25rem) {
+  .activities-list {
+  grid-template-columns: 1fr;
 }
 
-.activities-list__param-value.medium {
-  color: orange;
 }
 
-.activities-list__param-value.alot {
-  color: darkgreen;
+/* 350px */
+@media only screen and (max-width:21.875rem) {
+  .activities-list__param {
+  flex-direction: column;
+}
 }
 </style>

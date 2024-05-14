@@ -58,4 +58,13 @@ const props = defineProps({
   font-size: calc(var(--fs-medium) - 0.5rem);
   flex: 1;
 }
+
+/* 350px */
+@media only screen and (max-width:21.875rem) {
+  .base-card__image {
+  object-fit: contain;
+  height: 5rem;
+  align-self: center;
+}
+}
 </style>

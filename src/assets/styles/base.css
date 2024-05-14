@@ -5,6 +5,7 @@
   --cl-secondary: rgb(28, 22, 73);
   --cl-dark: #212529;
   --cl-light: #f8f9fa;
+  --cl-white: white;
 
   /* FONT SIZES */
   --fs-small: 1rem;
@@ -19,7 +20,7 @@
 
   /* PADDING */
   --pd-page-side: 2rem;
-  --pd-section-vertical: 8rem;
+  --pd-section-vertical: clamp(4rem, 10vw,8rem);
   --pd-small: 1rem;
   --pd-medium: 2rem;
   --pd-large: 3rem;
@@ -35,6 +36,7 @@
   /* 56.25rem - 900px  */
   /* 42.5rem - 680px */
   /* 31.25rem - 500px   */
+  /* 21.875rem - 350px */
 }
 
 *,
@@ -67,4 +69,5 @@ body {
   font-family: 'Roboto', 'sans-serif';
   font-size: 1rem;
   color: var(--cl-secondary);
+  background-color: var(--cl-white);
 }

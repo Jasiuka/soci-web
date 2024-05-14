@@ -15,3 +15,25 @@ header .link-active {
   position: relative;
   padding: var(--pd-section-vertical) 0;
 }
+
+
+
+/* Free spaces parameter */
+
+.param-value.low, .param-value.medium, .param-value.alot {
+  font-weight: 600;
+}
+
+
+.param-value.low {
+  color: red;
+
+}
+
+.param-value.medium{
+  color: orange;
+}
+
+.param-value.alot{
+  color: darkgreen;
+}
