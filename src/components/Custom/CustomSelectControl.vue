@@ -2,7 +2,7 @@
   <div class="select-wrapper">
     <span class="select-name">{{ name }}</span>
     <select class="select">
-      <option :value="option.value" v-for="option in optionsList">
+      <option :value="option.value" v-for="option in optionsList" :key="option.value + ' ' + option.display">
         {{ option.display }}
       </option>
     </select>
