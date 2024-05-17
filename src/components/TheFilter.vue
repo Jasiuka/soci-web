@@ -5,6 +5,7 @@
       v-for="select in selectionData"
       :name="select.label"
       :options-list="select.options"
+      :key="select.label"
     />
     <CustomButton
       custom-class="filter__button"

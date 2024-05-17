@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Option, Select } from '@/types'
+import type {Select } from '@/types'
 import TheFilter from '../TheFilter.vue'
 import BaseCard from '@/components/Base/BaseCard.vue'
 import { testData } from '@/data'
@@ -56,33 +56,6 @@ const selectionData: Select[] = [
   }
 ]
 
-const options: Option[] = [
-  { display: 'Visi miestai', value: 'all_city' },
-  { display: 'Visi tipai', value: 'all_type' },
-  { display: 'Visos formos', value: 'all_form' },
-  { display: 'Visos sritys', value: 'all_field' }
-]
-
-
-// function getFreeSpacesColor(valueString: string) {
-//   const valueArray = valueString.split('/')
-//   const availableSpaces = valueArray[0]
-//   const spaces = valueArray[1]
-
-//   const percent = parseInt(availableSpaces) / parseInt(spaces)
-
-//   let classToAdd = ''
-
-//   if (percent < 0.3) {
-//     classToAdd = 'low'
-//   } else if (percent < 0.6 && percent > 0.3) {
-//     classToAdd = 'medium'
-//   } else if (percent > 0.6) {
-//     classToAdd = 'alot'
-//   }
-
-//   return classToAdd
-// }
 </script>
 
 <style scoped>

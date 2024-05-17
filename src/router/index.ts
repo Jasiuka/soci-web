@@ -6,6 +6,7 @@ import ActivityView from "../views/ActivityView.vue"
 import SignIn from '../components/Auth/SignIn.vue'
 import SignUp from '@/components/Auth/SignUp.vue'
 import PassRecover from '@/components/Auth/PassRecover.vue'
+import NotFoundView from '@/views/NotFoundView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,6 +38,11 @@ const router = createRouter({
       path: '/activity/:id',
       name: 'activity',
       component: ActivityView
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'notFound',
+      component: NotFoundView,
     }
   ]
 })
