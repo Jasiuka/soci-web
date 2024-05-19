@@ -23,35 +23,30 @@ const benefits: { icon: string; title: string; description: string }[] = [
     icon: 'touchscreen-icon',
     title: 'Paprastumas',
     description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum est sed ex deserunt amet neque laboriosam error, eos nihil inventore. Quisquam mollitia in'
+      'Čia galite susirasti tinkamiausią savanorystės veiklą ar savanorį keliais mygtukų paspaudimais ir matyti visą Jums reikalingą informaciją vienoje vietoje. '
   },
   {
     icon: 'autumn-leaf-icon',
     title: 'Tvarumas',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, inventore sunt illo unde ea animi neque error aperiam accusamus. Provident voluptate voluptas rerum itaque incidunt nihil ut. Provident, quisquam explicabo.'
+      'Mūsų sistemos dėka, popierinių dokumentų atsisakymas tampa realybe – visi reikalingi duomenys yra perkeliami į elektroninę erdvę ir ten apdorojami.'
   },
   {
-    icon: 'touchscreen-icon',
-    title: 'Paprastumas',
+    icon: 'clock-icon',
+    title: 'Spartumas',
     description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum est sed ex deserunt amet neque laboriosam error, eos nihil inventore. Quisquam mollitia in'
+      'Šioje sistemoje, mes apjungiame visas tris į savanorystę įstraukusias šalis, todėl duomenų apsikeitimas tampa lengvesnis ir greitesnis.'
   },
   {
-    icon: 'autumn-leaf-icon',
-    title: 'Tvarumas',
+    icon: 'setting-icon',
+    title: 'Efektyvumas',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, inventore sunt illo unde ea animi neque error aperiam accusamus. Provident voluptate voluptas rerum '
+      'Skaitmenizuodami savanorystės apskaitos procesus mūsų platformoje, mažiname darbo krūvį mokytojams bei ne pelno siekiančioms organizacijoms.'
   }
 ]
 </script>
 
 <style scoped>
-/* :deep(.benefits__layout) {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-medium);
-} */
 :deep(.benefits__layout) {
   display: grid;
   grid-template-columns: 1fr;

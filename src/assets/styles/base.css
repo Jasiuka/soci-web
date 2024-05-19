@@ -39,6 +39,10 @@
   /* 21.875rem - 350px */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {

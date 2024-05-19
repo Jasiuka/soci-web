@@ -78,4 +78,22 @@
   background-color: var(--cl-light);
   border-radius: var(--border-radius);
 }
+
+@media only screen and (max-width:21.875rem) {
+  .footer__logo {
+  width: 8rem;
+  height: 6rem;
+}
+
+
+.footer__top h5 {
+  font-size: calc(var(--fs-medium) - 0.3rem);
+}
+
+.footer__top {
+  gap: var(--sp-small);
+}
+
+
+}
 </style>
