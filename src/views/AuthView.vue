@@ -100,8 +100,8 @@ const formName = computed(() => {
 }
 
 .auth__logo {
-  width: 14rem;
-  height: 12rem;
+  width: 10rem;
+  height: 8rem;
 }
 
 /* 900 px */

@@ -1,6 +1,7 @@
 # SOCI.LT WEBSITE
 
-### HOW TO VIEW PROJECT
+### HOW TO VIEW PROJECT (NODE.JS REQUIRED)
+
 
 ## Project Setup
 

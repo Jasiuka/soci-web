@@ -19,8 +19,6 @@
       <div class="about-us__special">
         <span>Norime priminti jog tai yra BETA versija</span>
         <span>Atsiradus nesklandumams kreiptis:</span>
-        <a type="email" href="mailto:alanas@soci.lt">alanas@soci.lt</a>
-        <a type="email" href="mailto:kornelijus@soci.lt" >kornelijus@soci.lt</a>
         <a type="email" href="mailto:info@soci.lt" >info@soci.lt</a>
       </div>
     </template>
