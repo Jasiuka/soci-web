@@ -78,8 +78,8 @@
   background-color: var(--cl-light);
   border-radius: var(--border-radius);
 }
-
-@media only screen and (max-width:21.875rem) {
+/* 500px */
+@media only screen and (max-width:31.25rem) {
   .footer__logo {
   width: 8rem;
   height: 6rem;

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import AuthView from '../views/AuthView.vue'
@@ -9,7 +9,7 @@ import PassRecover from '@/components/Auth/PassRecover.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   linkActiveClass: 'link-active',
   scrollBehavior(to,from,savedPosition) {
     if(savedPosition) {
@@ -51,7 +51,8 @@ const router = createRouter({
       name: 'notFound',
       component: NotFoundView,
     }
-  ]
+  ],
+
 })
 
 export default router
