@@ -6,7 +6,7 @@
   >
     <template #default>
       <TheFilter button-text="Ieškoti" :selection-data="selectionData" />
-      <div class="activities-list">
+      <div id="activities" class="activities-list">
         <BaseCard
           v-for="activity in testData.activities"
           :image="activity.image"

@@ -3,7 +3,7 @@
         <BaseSection   
     custom-section-class="activity-page"
     custom-layout-class="activity-page__layout">
-    <template #default>
+    <template v-if="activity" #default>
       <div class="activity-page__heading">
         <img class="activity-page__image" :alt="activity?.title + ' veiklos paveikslėlis'" :src="`/${activity?.image}.jpg`"/>
 
@@ -64,6 +64,11 @@
       </div>
       <CustomButton :button-size="ButtonSizes.SMALL" :button-style="ButtonStyles.REGULAR" custom-class="activity-page__button" :button-title="`Aplikuoti į ${activity?.title} veiklą`" button-text="Aplikuoti"/>
     </template>
+    <template v-else #default>
+      <h2>Atsiprašome, bet savanorystės veikla, kurią bandote pasiekti, nerasta. Veiklos ID {{ activityId }}</h2>
+      <span>Galbūt įvyko klaida arba veikla buvo pašalinta.</span>
+      <span>Prašome patikrinti URL adresą arba grįžti į <RouterLink class="link-clickable" to="/">pagrindinį</RouterLink> puslapį ir bandyti pasirinkti veiklą iš sąrašo.</span>
+    </template>
         </BaseSection>
     </TheLayout>
   </template>
@@ -79,10 +84,12 @@
 import type { Activity } from '@/types';
 import CustomButton from '@/components/Custom/CustomButton.vue';
 const activity = ref<Activity | null>(null)
+const activityId = ref<string>('')
 
 const activeTab = ref<string>('info')
 
 onBeforeMount(() => {
+  activityId.value = params.id as string
   const activityFound = findDataById() as Activity | null
   activity.value = activityFound
 })

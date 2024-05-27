@@ -1,5 +1,3 @@
-.layout__container {
-}
 
 .section__container {
   max-width: var(--max-width);
@@ -37,3 +35,16 @@ header .link-active {
 .param-value.alot{
   color: darkgreen;
 }
+
+
+/* Clickable links (not button style) */
+
+.link-clickable {
+  border-bottom: 1px solid currentColor;
+  transition: var(--transition);
+}
+
+.link-clickable:hover {
+  border-bottom-color: transparent;
+}
+

@@ -10,13 +10,26 @@
           Platforma, kurioje patogiai, greitai ir lengvai rasite sau tinkamiausią savanorystės
           veiklą
         </h2>
+        <CustomButton
+      custom-class="hero__button"
+      button-text="Pradėti paiešką"
+      button-title="Pradėti savanorystės veiklų paiešką"
+      @click="scrollToActivities"
+    />
       </div>
       <img class="hero-illustration" src="@/assets/illustrations/travel-green_no-bg.svg" />
     </template>
   </BaseSection>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import CustomButton from '../Custom/CustomButton.vue';
+
+function scrollToActivities() {
+  const activitiesEl = document.getElementById('activities');
+  activitiesEl?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+}
+</script>
 
 <style scoped>
 .hero {
@@ -27,6 +40,9 @@
 
 .hero-heading--wrapper {
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 .heading {
   font-size: clamp(var(--fs-medium), 3vw, var(--fs-heading));
@@ -35,6 +51,7 @@
 
 .sub-heading {
   font-size: clamp(var(--fs-small), 1vw, calc(var(--fs-large) - 0.4rem));
+  margin-bottom: var(--sp-small);
 }
 :deep(.hero__layout) {
   display: flex;

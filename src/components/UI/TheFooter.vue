@@ -7,7 +7,7 @@
           <img src="/src/assets/logo/SociLT-ESK-White.png" alt="SOCI.LT logotipas" class="footer__logo"/>
           <div class="footer__contacts">
             <h5>Kontaktai</h5>
-            <a title="Rašyti el. laišką" href="mailto:info@soci.lt">info@soci.lt</a>
+            <a class="link-clickable" title="Rašyti el. laišką" href="mailto:info@soci.lt">info@soci.lt</a>
           </div>
         </div>
         <div class="footer__line"></div>
@@ -57,13 +57,7 @@
 }
 
 .footer__top a {
-  border-bottom: 1px solid currentColor;
   align-self: baseline;
-  transition: var(--transition);
-}
-
-.footer__top a:hover {
-  border-bottom-color: transparent;
 }
 
 

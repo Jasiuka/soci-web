@@ -1,5 +1,6 @@
 <template>
-  <button
+  <a v-if="hyperlink" :href="hyperlink" :class="[customClass, buttonStyle, buttonSize]" :title="buttonTitle" class="custom-button">{{ buttonText }}</a>
+  <button v-else
     class="custom-button"
     :title="buttonTitle"
     :class="[customClass, buttonStyle, buttonSize]"
@@ -39,6 +40,10 @@ defineProps({
     type: String as PropType<ButtonSizes>,
     required: false,
     default: ButtonSizes.MEDIUM
+  },
+  hyperlink: {
+    type: String,
+    required: false,
   }
 })
 </script>
