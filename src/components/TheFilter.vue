@@ -40,10 +40,6 @@ defineProps({
 
 <style scoped>
 .filter {
-  /* display: flex;
-  gap: var(--sp-medium);
-  align-items: end;
-  flex-wrap: wrap; */
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -52,10 +48,4 @@ defineProps({
   grid-auto-rows: 1fr;
 }
 
-/* .filter > * {
-  flex: 1;
-} */
-
-:deep(.filter__button) {
-}
 </style>
