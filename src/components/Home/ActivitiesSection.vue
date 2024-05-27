@@ -5,8 +5,8 @@
     custom-layout-class="activities__layout"
   >
     <template #default>
-      <TheFilter button-text="Ieškoti" :selection-data="selectionData" />
-      <div id="activities" class="activities-list">
+      <TheFilter custom-id="activities" button-text="Ieškoti" :selection-data="selectionData" />
+      <div class="activities-list">
         <BaseCard
           v-for="activity in testData.activities"
           :image="activity.image"

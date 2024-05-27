@@ -1,5 +1,5 @@
 <template>
-  <div class="filter">
+  <div class="filter" :id="customId">
     <CustomInputControl input-name="activity_search" label="Raktinis žodis" />
     <CustomSelectControl
       v-for="select in selectionData"
@@ -30,6 +30,10 @@ defineProps({
   buttonText: {
     type: String,
     required: true
+  },
+  customId: {
+    type: String,
+    required: false,
   }
 })
 </script>
