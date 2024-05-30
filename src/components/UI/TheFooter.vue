@@ -3,7 +3,6 @@
     <div class="footer__container section__container">
       <div class="layout__container footer__layout">
         <div class="footer__top">
-
           <img src="/src/assets/logo/SociLT-ESK-White.png" alt="SOCI.LT logotipas" class="footer__logo"/>
           <div class="footer__contacts">
             <h5>Kontaktai</h5>
@@ -14,8 +13,6 @@
         <div class="footer__bot">
           <span>SOCI.LT©2024 Visos teisės saugomos</span>
         </div>
-
-
       </div>
     </div>
   </footer>

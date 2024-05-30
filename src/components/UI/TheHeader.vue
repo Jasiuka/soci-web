@@ -7,7 +7,6 @@
       </Transition>
     </button>
     <nav class="nav" :class="{ open: menuOpen }">
-      <!-- <img class="nav-logo" src="@/assets/logo/Soci-no-words-black.svg" /> -->
       <LogoSvg />
       <ul class="nav-list">
         <li class="nav-list__item">

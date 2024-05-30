@@ -11,7 +11,6 @@
 
 <script lang="ts" setup>
 import type { Option } from '@/types'
-import type { PropType } from 'vue'
 defineProps<{
   name: string,
   optionsList: Option[],

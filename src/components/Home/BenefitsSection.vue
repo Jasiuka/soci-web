@@ -16,7 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-import BenefitComponent from '@components/BenefitComponent.vue'
 import Benefit from '@components/BenefitComponent.component.vue'
 
 const benefits: { icon: string; title: string; description: string }[] = [
