@@ -51,7 +51,7 @@ const benefits: { icon: string; title: string; description: string }[] = [
 
 .benefits__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, clamp(15rem,30vw,35rem));
+  grid-template-columns: repeat(auto-fit, clamp(18rem,30vw,35rem));
   column-gap: var(--sp-large);
   grid-template-rows: repeat(2, 1fr);
   justify-content: space-between;
@@ -63,5 +63,10 @@ const benefits: { icon: string; title: string; description: string }[] = [
 
 }
 
-
+/* 680px */
+@media only screen and (max-width: 42.5rem) {
+  :deep(.benefits__layout) {
+  align-items: center;
+ } 
+}
 </style>
