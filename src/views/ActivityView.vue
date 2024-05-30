@@ -32,7 +32,7 @@
 
             <div v-for="activityParam in activity?.params" :key="activityParam.heading" class="activity-page__param">
               <h4 class="activity-page__param-title title">{{ activityParam.heading }}</h4>
-              <p  :class="{ [getFreeSpacesColor(activityParam.value)]: activityParam.heading.includes('vietos') }" class="activity-page__param-value param-value">{{ activityParam.value }}</p>
+              <p  :class="{ [colorFreeSpacesColor(activityParam.value)]: activityParam.heading.includes('vietos') }" class="activity-page__param-value param-value">{{ activityParam.value }}</p>
             </div>
           </div>
         </div>
@@ -74,15 +74,14 @@
   </template>
 
   <script lang="ts" setup>
-  import { getFreeSpacesColor } from '@/utils/helper';
+  import { colorFreeSpacesColor } from '@/utils/colorFreeSpaceSlot.util';
   import { testData } from '@/data';
   import { useRoute } from 'vue-router';
   import { ButtonSizes, ButtonStyles } from '@/types';
   const {params} = useRoute()
 
-  import { computed, onBeforeMount, ref } from 'vue';
+  import {onBeforeMount, ref } from 'vue';
 import type { Activity } from '@/types';
-import CustomButton from '@/components/Custom/CustomButton.vue';
 const activity = ref<Activity | null>(null)
 const activityId = ref<string>('')
 

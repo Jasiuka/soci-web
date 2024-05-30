@@ -1,9 +1,9 @@
 <template>
   <form class="form">
     <div class="form__controls">
-      <CustomInputControl label="El. Paštas" input-type="email" input-name="email" />
-      <CustomInputControl label="Slaptažodis" input-type="password" input-name="password" />
-      <CustomInputControl label="Pakartoti slaptažodį" input-type="password" input-name="repeat" />
+      <InputControl label="El. Paštas" input-type="email" input-name="email" />
+      <InputControl label="Slaptažodis" input-type="password" input-name="password" />
+      <InputControl label="Pakartoti slaptažodį" input-type="password" input-name="repeat" />
     </div>
     <CustomButton
       button-text="Registruotis"
@@ -20,8 +20,6 @@
 </template>
 
 <script lang="ts" setup>
-import CustomButton from '../Custom/CustomButton.vue'
-import CustomInputControl from '../Custom/CustomInputControl.vue'
 import { ButtonStyles, ButtonSizes } from '@/types'
 </script>
 

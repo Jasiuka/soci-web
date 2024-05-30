@@ -19,7 +19,7 @@
               <span>{{ param.heading }}:</span>
               <span
                 class="activities-list__param-value param-value"
-                :class="{ [getFreeSpacesColor(param.value)]: param.heading.includes('vietos') }"
+                :class="{ [colorFreeSpacesColor(param.value)]: param.heading.includes('vietos') }"
                 >{{ param.value }}</span
               >
             </div>
@@ -32,10 +32,10 @@
 
 <script lang="ts" setup>
 import type {Select } from '@/types'
-import TheFilter from '../TheFilter.vue'
+import TheFilter from '@components/TheFilter.vue'
 import BaseCard from '@/components/Base/BaseCard.vue'
 import { testData } from '@/data'
-import { getFreeSpacesColor } from '@/utils/helper';
+import { colorFreeSpacesColor } from '@/utils/colorFreeSpaceSlot.util';
 
 const selectionData: Select[] = [
   { name: 'city', label: 'Miestas', options: [{ display: 'Visi miestai', value: 'all_city' }] },

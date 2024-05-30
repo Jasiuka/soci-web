@@ -1,6 +1,6 @@
 
 // Function which returns class depending on free spaces left (laisvos vietos) percentage
-export function getFreeSpacesColor(valueString: string) {
+export function colorFreeSpacesColor(valueString: string) {
     const valueArray = valueString.split('/')
     const availableSpaces = valueArray[0]
     const spaces = valueArray[1]

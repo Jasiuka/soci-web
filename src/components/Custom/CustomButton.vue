@@ -11,41 +11,25 @@
 </template>
 
 <script lang="ts" setup>
-import type { ButtonHTMLAttributes, Prop, PropType } from 'vue'
+import type { ButtonHTMLAttributes} from 'vue'
 import { ButtonStyles, ButtonSizes } from '@/types'
-defineProps({
-  buttonText: {
-    type: String,
-    required: true
-  },
-  buttonTitle: {
-    type: String,
-    required: true
-  },
-  customClass: {
-    type: String,
-    required: false
-  },
-  buttonType: {
-    type: String as PropType<ButtonHTMLAttributes['type']>,
-    required: false,
-    default: 'button'
-  },
-  buttonStyle: {
-    type: String as PropType<ButtonStyles>,
-    required: false,
-    default: ButtonStyles.REGULAR
-  },
-  buttonSize: {
-    type: String as PropType<ButtonSizes>,
-    required: false,
-    default: ButtonSizes.MEDIUM
-  },
-  hyperlink: {
-    type: String,
-    required: false,
-  }
+
+type Props = {
+  buttonText: string,
+  buttonTitle: string,
+  customClass?: string,
+  buttonType?: ButtonHTMLAttributes['type'],
+  buttonStyle?: ButtonStyles,
+  buttonSize?: ButtonSizes,
+  hyperlink?: string,
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  buttonType: 'button',
+  buttonStyle: ButtonStyles.REGULAR,
+  buttonSize: ButtonSizes.MEDIUM,
 })
+
 </script>
 
 <style scoped>

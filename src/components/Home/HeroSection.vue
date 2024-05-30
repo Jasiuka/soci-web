@@ -23,11 +23,10 @@
 </template>
 
 <script setup lang="ts">
-import CustomButton from '../Custom/CustomButton.vue';
 
 function scrollToActivities() {
   const activitiesEl = document.getElementById('activities');
-  activitiesEl?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+  activitiesEl?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
 }
 </script>
 

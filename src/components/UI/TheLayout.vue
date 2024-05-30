@@ -10,20 +10,18 @@
 </template>
 
 <script lang="ts" setup>
-import TheHeader from './TheHeader.vue'
-import TheFooter from './TheFooter.vue'
-import ScrollToTopButton from '../ScrollToTopButton.vue'
+import TheHeader from '@components/UI/TheHeader.vue'
+import TheFooter from '@components/UI/TheFooter.vue'
+import ScrollToTopButton from '@components/ScrollToTopButton.vue'
 import { onMounted, onUnmounted, ref } from 'vue';
 
 const scrollBtnVisible = ref<boolean>(false)
-defineProps({
-  footerRequired: {
-    type: Boolean,
-    required: false,
-    default: true
-  }
-})
 
+withDefaults(defineProps<{
+  footerRequired?: boolean,
+}>(),{
+  footerRequired: true
+})
 const main = ref<HTMLElement | null>(null);
 
 function handleScroll() {

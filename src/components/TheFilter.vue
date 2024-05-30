@@ -1,7 +1,7 @@
 <template>
   <div class="filter" :id="customId">
-    <CustomInputControl input-name="activity_search" label="Raktinis žodis" />
-    <CustomSelectControl
+    <InputControl input-name="activity_search" label="Raktinis žodis" />
+    <SelectControl
       v-for="select in selectionData"
       :name="select.label"
       :options-list="select.options"
@@ -16,26 +16,12 @@
 </template>
 
 <script lang="ts" setup>
-import type { PropType } from 'vue'
 import type { Select } from '@/types'
-import CustomSelectControl from './Custom/CustomSelectControl.vue'
-import CustomInputControl from './Custom/CustomInputControl.vue'
-import CustomButton from './Custom/CustomButton.vue'
-
-defineProps({
-  selectionData: {
-    type: Array as PropType<Select[]>,
-    required: true
-  },
-  buttonText: {
-    type: String,
-    required: true
-  },
-  customId: {
-    type: String,
-    required: false,
-  }
-})
+defineProps<{
+  selectionData: Select[],
+  buttonText: string,
+  customId?: string
+}>()
 </script>
 
 <style scoped>

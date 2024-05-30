@@ -11,26 +11,15 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  customSectionClass: {
-    type: String,
-    required: false
-  },
-  customLayoutClass: {
-    type: String,
-    required: false
-  },
-  sectionHeading: {
-    type: String,
-    required: false,
-    default: ''
-  }
-})
+defineProps<{
+  customSectionClass?: string,
+  customLayoutClass?: string,
+  sectionHeading?: string,
+}>()
 </script>
 
 <style scoped>
-.layout__container {
-}
+
 
 .section__container {
   max-width: var(--max-width);

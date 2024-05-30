@@ -9,27 +9,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-
-
-const props = defineProps({
-  image: {
-    type: String,
-    required: true
-  },
-  cardTitle: {
-    type: String,
-    required: true
-  },
-  customCardClass: {
-    type: String,
-    required: false
-  },
-  routeTo: {
-    type: String,
-    required: true,
-  }
-})
+const props = defineProps<{
+  image: string,
+  cardTitle: string,
+  customCardClass?: string,
+  routeTo: string,
+}>()
 
 </script>
 

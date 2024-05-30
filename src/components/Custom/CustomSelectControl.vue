@@ -12,16 +12,10 @@
 <script lang="ts" setup>
 import type { Option } from '@/types'
 import type { PropType } from 'vue'
-defineProps({
-  name: {
-    type: String,
-    required: true
-  },
-  optionsList: {
-    type: Array as PropType<Option[]>,
-    required: true
-  }
-})
+defineProps<{
+  name: string,
+  optionsList: Option[],
+}>()
 </script>
 
 <style scoped>

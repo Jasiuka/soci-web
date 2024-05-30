@@ -5,7 +5,7 @@
       atsiųsime jums nuorodą kurią paspaudę galėsite atnaujinti slaptažodį
     </p>
     <div class="form__controls">
-      <CustomInputControl label="El. Paštas" input-type="email" input-name="email" />
+      <InputControl label="El. Paštas" input-type="email" input-name="email" />
     </div>
     <CustomButton
       button-text="Siųsti"
@@ -18,8 +18,6 @@
 </template>
 
 <script lang="ts" setup>
-import CustomButton from '../Custom/CustomButton.vue'
-import CustomInputControl from '../Custom/CustomInputControl.vue'
 import { ButtonStyles, ButtonSizes } from '@/types'
 </script>
 

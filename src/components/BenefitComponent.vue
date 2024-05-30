@@ -14,20 +14,11 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  icon: {
-    type: String,
-    required: true
-  },
-  benefitTitle: {
-    type: String,
-    required: true
-  },
-  benefitDescription: {
-    type: String,
-    required: true
-  }
-})
+defineProps<{
+  icon: string,
+  benefitTitle: string,
+  benefitDescription: string
+}>()
 </script>
 
 <style scoped>

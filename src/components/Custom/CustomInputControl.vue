@@ -13,22 +13,15 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-defineProps({
-  label: {
-    type: String,
-    required: true
-  },
-  inputType: {
-    type: String,
-    required: false,
-    default: 'text'
-  },
-  inputName: {
-    type: String,
-    required: true
-  }
-})
 
+type Props = {
+  label: string,
+  inputType?: string,
+  inputName: string
+}
+withDefaults(defineProps<Props>(),{
+  inputType: 'text',
+})
 const inputVal = ref('')
 </script>
 

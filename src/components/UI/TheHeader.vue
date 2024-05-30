@@ -25,10 +25,10 @@
 </template>
 
 <script lang="ts" setup>
-import LogoSvg from '../LogoSvg.vue'
-import { computed, ref } from 'vue'
-import MenuIcon from '../icons/MenuIcon.vue'
-import CloseIcon from '../icons/CloseIcon.vue'
+import LogoSvg from '@components/LogoSvg.vue'
+import {ref } from 'vue'
+import MenuIcon from '@components/icons/MenuIcon.vue'
+import CloseIcon from '@components/icons/CloseIcon.vue'
 const menuOpen = ref<boolean>(false)
 function toggleMobileMenu() {
   menuOpen.value = !menuOpen.value
