@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory} from 'vue-router'
-import HomeView from '@views/HomeView.vue'
-import AboutView from '@views/AboutView.vue'
-import AuthView from '@views/AuthView.vue'
-import ActivityView from "@views/ActivityView.vue"
+import HomeView from '@/views/Home.view.vue'
+import AboutView from '@/views/About.view.vue'
+import AuthView from '@/views/Auth.view.vue'
+import ActivityView from "@/views/Activity.view.vue"
 import SignIn from '@components/Auth/SignIn.vue'
 import SignUp from '@components/Auth/SignUp.vue'
 import PassRecover from '@components/Auth/PassRecover.vue'
-import NotFoundView from '@views/NotFoundView.vue'
+import NotFoundView from '@/views/NotFound.view.vue'
+import ActivitiesView from '@/views/Activities.view.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -23,6 +24,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/activities',
+      name: 'activities',
+      component: ActivitiesView
     },
     {
       path: '/about-us',

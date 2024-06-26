@@ -16,6 +16,9 @@
           <RouterLink class="nav-list__item-link" to="/about-us">Apie mus</RouterLink>
         </li>
         <li class="nav-list__item">
+          <RouterLink class="nav-list__item-link" to="/activities">Veiklos</RouterLink>
+        </li>
+        <li class="nav-list__item">
           <RouterLink class="nav-list__item-link" to="/auth">Prisijungti</RouterLink>
         </li>
       </ul>

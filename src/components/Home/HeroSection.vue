@@ -14,7 +14,7 @@
       custom-class="hero__button"
       button-text="Pradėti paiešką"
       button-title="Pradėti savanorystės veiklų paiešką"
-      @click="scrollToActivities"
+      @click="moveToActivities"
     />
       </div>
       <img class="hero-illustration" src="@/assets/illustrations/travel-green_no-bg.svg" />
@@ -23,10 +23,11 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
-function scrollToActivities() {
-  const activitiesEl = document.getElementById('activities');
-  activitiesEl?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+function moveToActivities() {
+  router.push("activities")
 }
 </script>
 
