@@ -1,10 +1,10 @@
 <template>
   <div class="filter" :id="customId">
     <InputControl input-name="activity_search" label="Raktinis žodis" />
-    <SelectControl
+    <CustomSelect
       v-for="select in selectionData"
-      :name="select.label"
-      :options-list="select.options"
+      :options="select.options"
+      :default="select.options[0]"
       :key="select.label"
     />
     <CustomButton
@@ -17,6 +17,7 @@
 
 <script lang="ts" setup>
 import type { Select } from '@/types'
+import CustomSelect from './CustomSelect.vue';
 defineProps<{
   selectionData: Select[],
   buttonText: string,

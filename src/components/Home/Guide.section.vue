@@ -21,6 +21,7 @@
 
 <script lang="ts" setup>
 import GuideCard from "@components/GuideCard.component.vue"
+import CustomSelect from "../CustomSelect.vue";
 
 const guideSteps = [
     {icon: 'form',title: "Registracija/Prisijungimas", subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi lacus, blandit eget magna et, volutpat viverra nunc. Phasellus consectetur, arcu sed volutpat hendrerit, dui metus bibendum purus, a vestibulum nibh nisi sed arcu. Aliquam eget tincidunt massa, ac blandit. '},
@@ -28,13 +29,25 @@ const guideSteps = [
     {icon:'search',title: "Paieška", subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel laoreet nisl. Curabitur tempor est risus, et gravida tortor condimentum eu. Curabitur vulputate eleifend erat quis sollicitudin. Nulla aliquam, massa ut rutrum maximus, tortor lorem dapibus nisi, eu congue ipsum leo eu sapien. Ut sit. '},
     {icon:'submit',title: "Aplikavimas", subtitle: 'lLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi lacus, blandit eget magna et, volutpat viverra nunc. Phasellus consectetur, arcu sed volutpat hendrerit, dui metus bibendum purus, a vestibulum nibh nisi sed arcu. Aliquam eget tincidunt massa, ac blandit.'}
 ]
+
+
+const options = [
+  {display: 'Choose A', value: 'a'},
+  {display: 'Choose B', value: 'b'},
+  {display: 'Choose C', value: 'c'},
+  {display: 'Choose D', value: 'd'},
+  {display: 'Default E', value: '0'},
+]
+
 </script>
 
 <style scoped>
 .guide-steps__wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
   gap: var(--sp-medium);
+
 }
 
 .test {
@@ -61,12 +74,6 @@ img {
   .line {
     display: none;
   }
-  
-  .guide-steps__wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr
-}
   }
   
 

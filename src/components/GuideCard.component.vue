@@ -39,8 +39,6 @@ defineProps<{
     flex-direction: row-reverse;
     padding-right: unset;
     padding-left: calc(var(--pd-large) * 2);
-
-
 }
 .guide-card__asset-container {
     flex-shrink: 0;
@@ -112,7 +110,6 @@ defineProps<{
     border-radius: 50%;
     font-size: var(--fs-medium);
     color: var(--cl-light);
-
 }
 
 
