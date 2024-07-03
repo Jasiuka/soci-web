@@ -1,0 +1,17 @@
+:root {
+    /* COLORS */
+    --cl-primary: #5bb55b;
+    --cl-secondary: rgb(28, 22, 73);
+    --cl-dark: #212529;
+    --cl-light: #f8f9fa;
+    --cl-white: #ffff;
+
+
+    --cl-bg-primary: #ffff;
+    --cl-bg-secondary: #212529;
+    --cl-text-primary: #212529;
+    --cl-text-secondary: #f8f9fa;
+    --cl-btn-secondary: #212529;
+    --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
