@@ -63,13 +63,37 @@ withDefaults(defineProps<Props>(), {
 
 .custom-button.outline {
     background-color: var(--cl-bg-primary);
-    color: var(--cl-text-secondary);
+    color: var(--cl-text-primary);
     border-color: var(--cl-primary);
 }
 
 .custom-button.outline:hover {
     background-color: var(--cl-primary);
     color: var(--cl-text-secondary);
+}
+
+.custom-button.no_bg {
+    background-color: transparent;
+    color: var(--cl-text-primary);
+    padding: unset;
+    font-weight: 600;
+    box-shadow: unset;
+}
+
+.custom-button.no_bg:hover {
+    color: var(--cl-primary);
+}
+
+.custom-button.secondary {
+    background-color: transparent;
+    color: var(--cl-text-primary);
+    padding: unset;
+    font-weight: 400;
+    box-shadow: unset;
+}
+
+.custom-button.secondary:hover {
+    color: var(--cl-text-primary-dark);
 }
 
 /* SIZES */

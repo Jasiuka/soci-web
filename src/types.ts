@@ -35,13 +35,22 @@ export enum Themes {
 
 export enum ButtonStyles {
     REGULAR = "regular",
-    OUTLINE = "outline"
+    OUTLINE = "outline",
+    NO_BACKGROUND = "no_bg",
+    SECONDARY = "secondary"
 }
 
 export enum ButtonSizes {
     SMALL = "small",
     MEDIUM = "medium",
     LARGE = "large"
+}
+
+export enum ModalComponents {
+    TERMS_OF_USE = "TermsOfUser",
+    PRIVACY_POLICY = "PrivacyPolicy",
+    CONFIRM_ACTIVITY_APPLY = "ConfirmActivityApply",
+    NONE = ""
 }
 
 type Company = {

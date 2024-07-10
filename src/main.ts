@@ -8,7 +8,7 @@ import TheLayout from "@/components/UI/DefaultLayout.component.vue"
 import CustomButton from "@/components/Custom/CustomButton.component.vue"
 import CustomInputControl from "@/components/Custom/CustomInputControl.component.vue"
 import CustomSelect from "@/components/Custom/CustomSelect.component.vue"
-
+import BaseModal from "@components/Base/BaseModal.component.vue"
 import App from "./App.vue"
 import router from "./router"
 
@@ -21,5 +21,6 @@ app.use(router)
     .component("CustomButton", CustomButton)
     .component("InputControl", CustomInputControl)
     .component("CustomSelect", CustomSelect)
+    .component("BaseModal", BaseModal)
 
 app.mount("#app")

@@ -20,14 +20,40 @@
                 </div>
                 <div class="footer__line"></div>
                 <div class="footer__bot">
-                    <span>SOCI.LT©2024 Visos teisės saugomos</span>
+                    <span>SOCI.LT©{{ thisYear }} Visos teisės saugomos</span>
+                    <div class="footer__modal-buttons">
+                        <button
+                            class="footer__modal-btn"
+                            @click="
+                                setModalComponent(
+                                    ModalComponents.PRIVACY_POLICY
+                                )
+                            "
+                        >
+                            Privatumo politika
+                        </button>
+                        <button
+                            class="footer__modal-btn"
+                            @click="
+                                setModalComponent(ModalComponents.TERMS_OF_USE)
+                            "
+                        >
+                            Naudojimosi taisyklės
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useModalStore } from "@/stores/modalStore"
+import { ModalComponents } from "@/types"
+const { setModalComponent } = useModalStore()
+
+const thisYear = new Date().getFullYear()
+</script>
 
 <style scoped>
 .footer {
@@ -67,8 +93,11 @@
 }
 
 .footer__bot {
+    align-self: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: var(--sp-small);
 }
 
 .footer__line {
@@ -76,6 +105,11 @@
     min-width: 40%;
     background-color: var(--cl-light);
     border-radius: var(--border-radius);
+}
+
+.footer__modal-btn {
+    text-decoration: underline;
+    background-color: transparent;
 }
 /* 500px */
 @media only screen and (max-width: 31.25rem) {
