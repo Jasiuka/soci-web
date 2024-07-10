@@ -5,6 +5,6 @@ export function changeTheme(newTheme: Themes) {
     if (newTheme === "light") {
         themeFile?.setAttribute("href", "/themes/light.css")
     } else {
-        themeFile?.setAttribute("href", "git ad/themes//dark.css")
+        themeFile?.setAttribute("href", "/themes/dark.css")
     }
 }
