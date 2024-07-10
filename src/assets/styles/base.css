@@ -78,6 +78,10 @@ body {
     
 }
 
+body[data-scrollable="false"] {
+    overflow: hidden;
+}
+
 #app {
     display: flex;
     flex-direction: column;

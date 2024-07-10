@@ -1,6 +1,7 @@
 import { ref } from "vue"
 import { defineStore } from "pinia"
 import { ModalComponents } from "@/types"
+import { toggleScrollOnBody } from "@/utils/lockScroll.utils"
 
 export const useModalStore = defineStore("modalStore", () => {
     // STATE
@@ -15,11 +16,13 @@ export const useModalStore = defineStore("modalStore", () => {
 
     function openModal() {
         isModalOpen.value = true
+        toggleScrollOnBody("lock")
     }
 
     function closeModal() {
         isModalOpen.value = false
         modalComponent.value = ModalComponents.NONE
+        toggleScrollOnBody("unlock")
     }
 
     return {
