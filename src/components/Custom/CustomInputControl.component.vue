@@ -14,17 +14,24 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue"
+import { onMounted, ref } from "vue"
 
 type Props = {
     label: string
     inputType?: string
     inputName: string
+    inputValue?: string
 }
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
     inputType: "text"
 })
 const inputVal = ref("")
+
+onMounted(() => {
+    if (props.inputValue) {
+        inputVal.value = props.inputValue
+    }
+})
 </script>
 
 <style scoped>

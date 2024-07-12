@@ -1,0 +1,23 @@
+.mb-small {
+    margin-bottom: var(--sp-small);
+}
+
+.mb-medium {
+    margin-bottom: var(--sp-medium);
+}
+
+.mb-large {
+    margin-bottom: var(--sp-large);
+}
+
+.cl-primary {
+    color: var(--cl-primary);
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.semi-bold {
+    font-weight: 500;
+}

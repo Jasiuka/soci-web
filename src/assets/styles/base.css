@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
 :root {
     /* COLORS */
+    --cl-primary: #5bb55b;
+    --cl-primary-text: #f8f9fa;
+    --cl-primary-dark: #297029;
     --cl-yellow-orange: #fcc419;    
     --cl-green: #37b24d;
     --cl-red: #fa5252;
+    --cl-grey: #adb5bd;
+    --cl-extra-grey: #f1f3f5;
     --cl-overlay: rgba(0, 0, 0, 0.2);
 
     /* FONT SIZES */

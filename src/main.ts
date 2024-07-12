@@ -1,5 +1,6 @@
 import "@assets/styles/base.css"
 import "@assets/styles/common.css"
+import "@assets/styles/helper.css"
 
 import { createApp } from "vue"
 import { createPinia } from "pinia"

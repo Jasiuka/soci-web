@@ -52,7 +52,7 @@ withDefaults(defineProps<Props>(), {
 
 .custom-button.regular {
     background-color: var(--cl-primary);
-    color: var(--cl-text-secondary);
+    color: var(--cl-primary-text);
 }
 
 .custom-button.regular:hover {
@@ -69,7 +69,7 @@ withDefaults(defineProps<Props>(), {
 
 .custom-button.outline:hover {
     background-color: var(--cl-primary);
-    color: var(--cl-text-secondary);
+    color: var(---cl-primary-text);
 }
 
 .custom-button.no_bg {
@@ -98,6 +98,11 @@ withDefaults(defineProps<Props>(), {
 
 /* SIZES */
 
+.custom-button.extra-small {
+    padding: calc(var(--pd-small) - 0.6rem);
+    font-size: var(--fs-small);
+}
+
 .custom-button.small {
     font-size: var(--fs-small);
 }
@@ -108,5 +113,13 @@ withDefaults(defineProps<Props>(), {
 
 .custom-button.large {
     font-size: var(--fs-medium);
+}
+
+/* DISABLED */
+
+.custom-button.disabled {
+    opacity: 0.6;
+    background-color: var(--cl-primary-dark);
+    pointer-events: none;
 }
 </style>
