@@ -4,9 +4,12 @@
     --cl-primary: #5bb55b;
     --cl-primary-text: #f8f9fa;
     --cl-primary-dark: #297029;
-    --cl-yellow-orange: #fcc419;    
+    --cl-yellow: #fcc419;  
+    --cl-yellow-light:  #fcd358;
     --cl-green: #37b24d;
+    --cl-green-light:#5bc46e;
     --cl-red: #fa5252;
+    --cl-red-light: #f37f7f;
     --cl-grey: #adb5bd;
     --cl-extra-grey: #f1f3f5;
     --cl-overlay: rgba(0, 0, 0, 0.2);

@@ -34,7 +34,7 @@ header .link-active {
 }
 
 .param-value.medium {
-    background-color: var(--cl-yellow-orange);
+    background-color: var(--cl-yellow);
 }
 
 .param-value.alot {

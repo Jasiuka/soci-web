@@ -39,4 +39,13 @@ defineProps<{
     margin-bottom: var(--sp-large);
     font-weight: 500;
 }
+
+/* 900px */
+@media only screen and (max-width: 56.25rem) {
+    .section__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 </style>

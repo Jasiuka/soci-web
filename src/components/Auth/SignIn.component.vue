@@ -39,12 +39,15 @@
 import { ButtonSizes, ButtonStyles } from "@/types"
 import { useAuthStore } from "@/stores/authStore"
 import { useRouter } from "vue-router"
+import { useNotificationsStore } from "@/stores/notificationStore"
+const { newNotification } = useNotificationsStore()
 
 const router = useRouter()
 const { setUser } = useAuthStore()
 function testLogin() {
     setUser({ email: "test@gmail.com", id: 15 })
     router.push("/")
+    newNotification("SUCCESS", "Sėkmingai prisijungėte")
 }
 </script>
 

@@ -109,14 +109,11 @@
 @media only screen and (max-width: 56.25rem) {
     .about-us__top {
         flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .about-us__img {
+        align-self: unset;
     }
 }
-
-/* @media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-} */
 </style>

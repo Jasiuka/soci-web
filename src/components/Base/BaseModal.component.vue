@@ -75,6 +75,7 @@ function handleModalClick(e: Event) {
     background-color: var(--cl-bg-primary);
     padding-right: 5px;
     padding-top: 5px;
+    margin: 0 var(--pd-page-side);
 }
 
 .modal__inner {

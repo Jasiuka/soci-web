@@ -4,6 +4,7 @@
         <ScrollToTopButton v-if="scrollBtnVisible" />
     </Transition>
     <main ref="main" class="main">
+        <Notification />
         <slot></slot>
         <Transition name="modal">
             <component :is="modal" v-if="isModalOpen"></component>
@@ -16,6 +17,7 @@
 import Header from "@/components/UI/Header.component.vue"
 import Footer from "@/components/UI/Footer.component.vue"
 import ScrollToTopButton from "@/components/ScrollToTopButton.component.vue"
+import Notification from "@components/Notifications/Notification.component.vue"
 import {
     computed,
     defineAsyncComponent,
